@@ -30,6 +30,19 @@
             <p>Find the best restaurants, cafes</p>
             <p>and bars in India</p>
         </div>
+                <!-- Restaurant Search Module -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <input 
+                    type="text" 
+                    id="restaurant-search" 
+                    placeholder="Search for restaurants, cuisines, or dishes..."
+                    autocomplete="off"
+                >
+                <button id="search-btn">Search</button>
+            </div>
+            <ul id="suggestions-list"></ul>
+        </div>
         <div class="empty-container">
             <p>p</p>
         </div>
@@ -195,6 +208,7 @@
         <p>Hang on while we fetch restaurants for you...😊</p>
     </div>
     <script src="script.js"></script>
+        <script src="searchModule.js"></script>
 </body>
 
 </html>
