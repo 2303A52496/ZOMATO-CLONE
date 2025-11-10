@@ -500,3 +500,106 @@ a {
     }
 
 }
+
+/* ===== SEARCH MODULE STYLES ===== */
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 0 20px;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#restaurant-search {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Edu TAS Beginner', cursive;
+}
+
+#restaurant-search::placeholder {
+    color: #9c9c9c;
+}
+
+#search-btn {
+    padding: 15px 25px;
+    background: #e23744;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+#search-btn:hover {
+    background: #d12a37;
+}
+
+#suggestions-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-height: 250px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+    margin-top: 2px;
+}
+
+.suggestion-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+    list-style: none;
+}
+
+.suggestion-item:hover {
+    background: #f8f8f8;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item.no-results {
+    color: #999;
+    cursor: default;
+}
+
+.suggestion-item.no-results:hover {
+    background: white;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 90%;
+    }
+    
+    #restaurant-search {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    
+    #search-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
